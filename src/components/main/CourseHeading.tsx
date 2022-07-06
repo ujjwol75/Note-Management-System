@@ -11,22 +11,22 @@ export default function Courses1() {
             </div>
             <div className='flex space-x-5 items-center justify-center'>
                 <div>
-                    <ButtonComponent buttontitle="All exams" />
+                    <button className='theme-btn'>ALl Exams</button>
                 </div>
                 <div>
-                    <ButtonComponent buttontitle="Computer" />
+                    <button className='blue-outline-btn'>Computer</button>
                 </div>
                 <div>
-                    <ButtonComponent buttontitle="Mathematics" />
+                    <button className='blue-outline-btn'>Mathematics</button>
                 </div>
                 <div>
-                    <ButtonComponent buttontitle="Science" />
+                    <button className='blue-outline-btn'>Science</button>
                 </div>
                 <div>
-                    <ButtonComponent buttontitle="Economics" />
+                    <button className='blue-outline-btn'>Economics</button>
                 </div>
                 <div>
-                    <ButtonComponent buttontitle="More notes" />
+                    <button className='blue-outline-btn'>More Notes</button>
                 </div>
             </div>
         </div>

@@ -21,10 +21,10 @@ export default function Coverpage({ height }: Props) {
                 <div className='absolute top-[405px] left-[544px]'>
                     <div className='flex'>
                         <div className='mr-4'>
-                            <ButtonComponent buttontitle="Become Publisher" />
+                            <button className='theme-btn'> Become Publisher</button>
                         </div>
                         <div>
-                            <ButtonComponent buttontitle="Read Notes" />
+                            <button className='transparent-btn'>Read Notes</button>
                         </div>
                     </div>
 

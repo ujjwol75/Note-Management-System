@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Details() {
+export default function Categories() {
     return (
         <div className='h-96 w-72 grid grid-rows-6 border-x-[1px] border-b-[1px]  border-[#E0E0E0] rounded-b-md'>
             <div className='bg-theme rounded-t-md p-6 text-md font-medium text-white'>
@@ -24,7 +24,7 @@ export default function Details() {
             </div>
             <div className=' text-sm p-8 border-b-[1px] font-medium text-[#37474F] flex items-center justify-between'>
                 <p >Status</p>
-                <p >04</p>
+                <p>04</p>
             </div>
 
         </div>

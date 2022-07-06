@@ -16,8 +16,8 @@ export default function CallAction() {
                     <p>content of a page when looking at its layout.</p>
                 </div>
                 <div className='flex space-x-5 '>
-                    <ButtonComponent buttontitle="Read notes" />
-                    <ButtonComponent buttontitle="Become Author" />
+                    <button className='transparent-btn'>Read Notes</button>
+                    <button className='transparent-btn'>Become Author</button>
 
                 </div>
             </div>

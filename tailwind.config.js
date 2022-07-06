@@ -14,6 +14,8 @@ module.exports = {
         Gray: "#455A64",
         button: "#FF532D",
         tgray: "#DDDDDD",
+        themetext: "#37474F",
+        purple: "#7436FF",
       },
     },
   },

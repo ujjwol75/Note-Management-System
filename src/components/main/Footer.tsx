@@ -75,7 +75,7 @@ export default function Footer() {
                         <div className='pb-2'>
                             <input type="text" className="py-1 mb-4 mr-6 rounded-lg border-slate-400 pl-2 bg-transparent border-b-2 outline-none" placeholder="Insert your Email" />
                         </div>
-                        <ButtonComponent buttontitle="Submit" />
+                        <ButtonComponent buttontitle="Subscribe" />
                     </div>
 
                 </div>
