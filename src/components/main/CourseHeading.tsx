@@ -9,7 +9,7 @@ export default function Courses1() {
                 <p >It is a long established fact that a reader will be distracted by the readable</p>
                 <p>content of a page when looking at its layout.</p>
             </div>
-            <div className='flex space-x-5 items-center justify-center'>
+            <div className='grid grid-cols-3 space-y-5'>
                 <div>
                     <button className='theme-btn'>ALl Exams</button>
                 </div>

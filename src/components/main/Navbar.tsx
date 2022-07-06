@@ -13,7 +13,7 @@ const Navbar = () => {
                     <Image src='/logo.png' alt="cover image" height={44.86} width={200} />
                 </div>
             </Link>
-            <div className="flex ">
+            <div className="lg:flex hidden ">
                 <Link href='Main'>
                     <div className="mx-3 text-[16px] cursor-pointer">
                         <span className="underline underline-offset-8 decoration-button decoration-2">Home</span>
