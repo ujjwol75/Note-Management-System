@@ -8,6 +8,9 @@
 .blue-btn{
     @apply bg-theme text-white h-[45px] rounded-[5px] cursor-pointer font-Jost font-medium leading-[23px]
 }
+.transparent-btn{
+    @apply bg-transparent text-white h-[45px] rounded-[5px] cursor-pointer font-Jost font-medium leading-[23px]
+}
 .purple-btn{
     @apply bg-purple border-[1px] border-purple text-white p-2 px-8 rounded-lg cursor-pointer
 }
@@ -23,9 +26,6 @@
 
 
 
-.transparent-btn{
-    @apply bg-transparent border-[1px] border-[#DDDDDD]  text-[#DDDDDD] p-2 px-8 rounded-lg cursor-pointer
-}
 
 .blue-outline-btn{
     @apply bg-transparent border-[1px] border-theme text-themetext p-2 px-8 rounded-lg cursor-pointer
