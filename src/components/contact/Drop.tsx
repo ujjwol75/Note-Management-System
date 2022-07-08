@@ -4,7 +4,10 @@ export default function Drop() {
     return (
         <div className='my-20  space-y-10'>
             <h2 className="text-[45px] font-bold  leading-[51px] text-themetext text-center">Drop Us a Line</h2>
-            <p className='mx-96 para font-Inter font-medium text-themetext text-center'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p >
+
+            <div className='mx-24'>
+                <p className='mx-96 para font-Inter font-medium text-themetext text-center leading-relaxed'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p >
+            </div>
             <div className='flex flex-col items-center justify-center'>
                 <div className='grid grid-cols-2 gap-7'>
                     <input type="text" placeholder='First name' className='w-96 h-9 p-3 border-[1px] border-[#ABABAB] outline-none rounded-lg' />

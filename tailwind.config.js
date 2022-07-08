@@ -18,12 +18,19 @@ module.exports = {
           "50px",
           {
             lineHeight: "65px",
+            fontWeight: 700,
           },
         ],
         heading: [
           "45px",
           {
             lineHeight: "59px",
+          },
+        ],
+        heading2: [
+          "45px",
+          {
+            lineHeight: "51px",
           },
         ],
         subheading: [

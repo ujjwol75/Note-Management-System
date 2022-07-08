@@ -29,7 +29,7 @@ const Navbar = () => {
                         </div>
                     )
                 }
-                <div className=" lg:flex  hidden">
+                <div className=" lg:flex  hidden text-base ">
                     <Link href='Main'>
                         <div className="mx-3 text-[16px] cursor-pointer">
                             <span className="underline underline-offset-8 decoration-button decoration-2">Home</span>
@@ -46,7 +46,7 @@ const Navbar = () => {
                             <span>Trending Notes</span>
                         </div>
                     </Link>
-                    <Link href="Contact">
+                    <Link href="Contactus">
                         <div className="mx-3 text-[16px] cursor-pointer">
                             <span>Contact us</span>
                         </div>

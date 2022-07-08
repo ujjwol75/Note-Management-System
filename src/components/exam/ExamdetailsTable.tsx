@@ -26,7 +26,7 @@ export default function Examdetailstable() {
                     <p>Price: Rs 5k</p>
                     <Rating />
                 </div>
-                <ButtonComponent buttontitle="Get Note" />
+                <button className='orange-btn w-[100px]'>Read more</button>
             </div>
 
         </div>
