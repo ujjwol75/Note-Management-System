@@ -16,12 +16,12 @@ export default function CallAction() {
                 </div>
                 <div className='flex  space-y-5 items-center xs:space-y-0 justify-center xs:space-x-5 flex-col xs:flex-row '>
                     <div>
-                        <button className='transparent-btn w-[168px] hidden sm:block'>Read Notes</button>
-                        <button className='small-transparent-btn rounded-lg text-sm sm:hidden'>Read Notes</button>
+                        <button className='hovertransparent-btn w-[168px] hidden md:block'>Read Notes</button>
+                        <button className='hover-small-transparent-btn rounded-lg text-sm md:hidden'>Read Notes</button>
                     </div>
                     <div>
-                        <button className='transparent-btn hidden w-[168px]  sm:block'>Become Author</button>
-                        <button className='small-transparent-btn rounded-lg text-sm sm:hidden'>Become Author</button>
+                        <button className='hovertransparent-btn w-[168px] hidden md:block'>Become Author</button>
+                        <button className='hover-small-transparent-btn rounded-lg text-sm md:hidden'>Become Author</button>
                     </div>
 
                 </div>

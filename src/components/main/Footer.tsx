@@ -21,7 +21,7 @@ export default function Footer() {
                             <div className='flex flex-col  text-white lg:-ml-9'>
                                 <div>
                                     <h1 className='text-xl font-Jost font-medium'>Get In Touch</h1>
-                                    <div className="w-14 h-[2px]  bg-button my-3"></div>
+                                    <div className="w-14 h-[2px] rounded-md  bg-button my-3"></div>
                                 </div>
                                 <div className='flex items-center justify-start'>
                                     <div className='my-3 mr-3'>
@@ -61,7 +61,7 @@ export default function Footer() {
                             <div className='flex flex-col  text-white sm:ml-8'>
                                 <div className='mb-5'>
                                     <h1 className='text-xl font-Jost font-medium'>Our Links</h1>
-                                    <div className="w-14 h-[2px]  bg-button my-3"></div>
+                                    <div className="w-14 h-[2px] rounded-md bg-button my-3"></div>
                                 </div>
                                 <div className='flex flex-col space-y-1 sm:space-y-2 font-medium font-Inter sm:text-sm  md:text-md lg:text-base leading-[26px]'>
                                     <p>Support</p>
@@ -74,7 +74,7 @@ export default function Footer() {
                             <div className='flex flex-col text-white mt-5 sm:mt-0'>
                                 <div className='mb-5'>
                                     <h1 className='text-xl font-Jost font-medium'>Subscribe</h1>
-                                    <div className="w-14 h-[2px]  bg-button my-3"></div>
+                                    <div className="w-14 h-[2px] rounded-md  bg-button my-3"></div>
                                 </div>
                                 <p className='mb-4  sm:text-md md:text-base leading-[26px] font-medium'>Get latest notes in your mail, subscribe to our newsletter.</p>
                                 <div className=" flex flex-col">

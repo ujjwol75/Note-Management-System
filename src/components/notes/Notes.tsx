@@ -16,7 +16,7 @@ export default function Notes() {
                     <span className='ml-4 font-Jost font-medium'>30 ongoing</span>
                 </div>
             </div>
-            <div className='w-full text-sm leading-[17px] md:leading-[24px] text-justify font-Inter font-medium text-[#37474F] '>
+            <div className='md:w-full text-sm leading-[17px] md:leading-[24px] text-justify font-Inter font-medium text-[#37474F] '>
                 <p className='mb-5'>
                     Grursus mal suada faci lisis Lorem ipsum dolarorit more ametion consectetur elit. Vesti at bulum nec odio
                     is aeao the dumm ipsumm ipsum that dolocons rsus mal suada and fadolorit to the consectetur elit.

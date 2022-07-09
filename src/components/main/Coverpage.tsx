@@ -19,14 +19,14 @@ export default function Coverpage({ height }: Props) {
                     <p className='text-xs sm:text-sm md:text-base font-medium   font-Inter  text-[#DDDDDD]  px-2  xs:px-7 sm:px-10 md:px-16 lg:px-56 xl:px-64 leading-relaxed' >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 </div>
 
-                <div className='flex flex-col items-center text-[16px] leading-[23px] justify-center space-y-4 sm:flex-row sm:space-y-0 space-x-6'>
+                <div className='flex flex-col items-center text-[16px] leading-[23px] justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6'>
                     <div className='cursor-pointer'>
-                        <button className='blue-btn w-[168px]  hidden md:block '> Become Publisher</button>
-                        <button className='small-blue-btn rounded-lg text-sm md:hidden'> Become Publisher</button>
+                        <button className='hovertransparent-btn w-[168px] hidden md:block'> Become Publisher</button>
+                        <button className='hover-small-transparent-btn rounded-lg text-sm md:hidden'> Become Publisher</button>
                     </div>
                     <div className='cursor-pointer'>
-                        <button className='transparent-btn w-[168px] hidden md:block'>Read Notes</button>
-                        <button className='small-transparent-btn rounded-lg text-sm md:hidden'>Read Notes</button>
+                        <button className='hovertransparent-btn w-[168px] hidden md:block'>Read Notes</button>
+                        <button className='hover-small-transparent-btn rounded-lg text-sm md:hidden'>Read Notes</button>
                     </div>
                 </div>
 

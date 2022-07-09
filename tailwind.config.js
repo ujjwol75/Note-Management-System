@@ -77,6 +77,9 @@ module.exports = {
         purple: "#7436FF",
         white: "#FFFFFF",
       },
+      backgroundImage: {
+        loginpage: "url('/login page.png')",
+      },
     },
   },
   plugins: [],

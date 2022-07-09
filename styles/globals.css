@@ -13,14 +13,20 @@
 .transparent-btn{
     @apply bg-transparent border-white border-[1px] text-white h-[45px] rounded-[5px] cursor-pointer font-Jost font-medium leading-[23px]
 }
+.hovertransparent-btn{
+    @apply bg-transparent border-white border-[1px] text-white h-[45px] rounded-[5px] cursor-pointer font-Jost font-medium leading-[23px] hover:bg-theme  hover:border-theme
+}
 .purple-btn{
     @apply bg-purple border-[1px] border-purple text-white p-2 px-8 rounded-lg cursor-pointer
 }
 .small-blue-btn{
-    @apply bg-theme border-[1px] border-theme text-white p-1 px-2 cursor-pointer
+    @apply bg-theme border-[1px] border-theme text-white h-[25px] px-2 cursor-pointer
 }
 .small-transparent-btn{
     @apply bg-transparent border-[1px] border-[#DDDDDD] text-white p-1 px-2 cursor-pointer
+}
+.hover-small-transparent-btn{
+    @apply bg-transparent border-[1px] border-[#DDDDDD] text-white p-1 px-2 cursor-pointer hover:bg-theme hover:border-theme
 }
 .small-transparent-btn2{
     @apply bg-transparent border-[1px] border-[#DDDDDD]  text-[#37474F] p-1 px-2 cursor-pointer
@@ -49,4 +55,8 @@
 }
 .btn-text{
     @apply font-Jost font-medium text-[16px] leading-[23px] 
+}
+
+.rating{
+    @apply rounded-md justify-self-start flex items-center justify-center 
 }

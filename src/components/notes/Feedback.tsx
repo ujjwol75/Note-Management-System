@@ -8,7 +8,7 @@ export default function Feedback() {
             <div className='mt-5 md:mt-10  w-full h-full xl:w-[780px] xl:h-[169px] rounded-md border-[#E0E0E0] border-2'>
                 <div className='flex flex-col lg:flex-row space-y-5 xs:space-y-0  m-3 sm:m-5 md:m-8 lg:m-10  items-center justify-center lg:justify-center'>
                     <div className=''>
-                        <div className='p-3 my-3 lg:p-0 lg:my-0 flex flex-col items-center justify-center lg:items-start border-[#37474F] lg:border-r-[0.2px] border-b-[0.2px] lg:border-b-[0px]  lg:mr-11'>
+                        <div className='p-3 lg:w-36 my-3 lg:p-0 lg:my-0 flex flex-col items-center justify-center lg:items-start border-[#37474F] lg:border-r-[0.2px] border-b-[0.2px] lg:border-b-[0px]  lg:mr-11'>
 
                             <p className='font-Jost text-sm font-medium text-themetext lg:mr-11 text-center'>5 Days ago</p>
                             <div>

@@ -19,7 +19,7 @@ export default function Publisher() {
                         </div>
                     </div>
                     <div className='border-[#E0E0E0] border-2 rounded-lg hidden sm:block'>
-                        <Rating />
+                        <Rating textColor="text-themetext" />
                     </div>
 
 
