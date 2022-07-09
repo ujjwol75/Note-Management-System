@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export default function Testimonial() {
     return (
-        <div className='mb-14'>
+        <div className='my-14'>
             <div className='flex flex-col items-center justify-center'>
                 <div className='text-[#37474F] text-center'>
-                    <p className='text-xl xs:text-2xl sm:text-3xl md:text-4xl xl:text-heading font-bold font-Jost mb-4'>Trusted by Best Readers</p>
+                    <p className='text-2xl sm:text-3xl lg:text-heading  font-bold font-Jost mb-4 text-center'>Trusted by Best Readers</p>
                     <div className='mx-5 xs:mx-20 sm:mx-24 md:mx-32 lg:mx-40 xl:mx-52'>
-                        <p className='text-center text-sm px-1   sm:px-14 lg:px-36 xl:px-48 font-medium  mt-3  font-Inter leading-normal text text-[#37474F] md:text-base' >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <p className='text-center text-sm sm:px-14 lg:px-36 xl:px-48 font-medium  font-Inter leading-normal text text-[#37474F] md:text-base' >It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 
                     </div>
                     {/* <div className='mx-20 sm:mx-24 md:mx-32 lg:mx-40 xl:mx-52'>

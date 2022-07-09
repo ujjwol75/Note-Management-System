@@ -78,8 +78,8 @@ const Navbar = () => {
             {(isOpen) ? (
 
 
-                <div className="h-full w-full bg-theme lg:hidden -mt-1">
-                    <div className="flex flex-col sm:flex-row items-center    sm:items-center sm:justify-evenly text-white">
+                <div className=" h-full w-full bg-theme lg:hidden -mt-1">
+                    <div className="flex flex-col items-center    sm:items-center sm:justify-evenly text-white">
                         <Link href='Main'>
                             <div className="mx-3 mb-4 text-[16px] cursor-pointer">
                                 <span >Home</span>
@@ -91,12 +91,12 @@ const Navbar = () => {
                                 <span>Notes</span>
                             </div>
                         </Link>
-                        <Link href="trendingnotes">
+                        <Link href="Trendingnotes">
                             <div className="mx-3 mb-4 text-[16px] cursor-pointer">
                                 <span>Trending Notes</span>
                             </div>
                         </Link>
-                        <Link href="#Footer">
+                        <Link href="Contactus">
                             <div className="mx-3 mb-4 text-[16px] cursor-pointer">
                                 <span>Contact us</span>
                             </div>
