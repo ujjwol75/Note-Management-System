@@ -31,7 +31,7 @@ export default function Signup() {
     };
   return (
     <>
-      <Signupcomponent signUpHandler= {signUpHandler}/>
+      <Signupcomponent signUpHandler= {signUpHandler} message={message}/>
     </>
   );
 }
