@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import Link from 'next/link';
+import React from 'react'
 
 const authors = ["Mr. John Deo", "Mr. Sanjay Kapor", "Mr. Jems Denor", "Mr. Dhilan"]
 
@@ -14,17 +15,18 @@ function Author() {
 
             <Menu.Items>
                 <div className='flex flex-col border-[1px] border-themetext rounded w-[156px] p-3 space-y-4 '>
-                    {authors.map((author) => (
-
-                        <Menu.Item>
-                            {({ active }) => (
-                                <Link href={author}
-                                    className={`${active && 'bg-blue-500'}`}
-                                >
-                                    {author}
-                                </Link>
-                            )}
-                        </Menu.Item>
+                    {authors.map((author: string, index: number) => (
+                        <React.Fragment key={index}>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <Link href={author}
+                                        className={`${active && 'bg-blue-500'}`}
+                                    >
+                                        {author}
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                        </React.Fragment>
                     ))}
                 </div>
 

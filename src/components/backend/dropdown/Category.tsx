@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import Link from 'next/link';
+import React from 'react';
 
 const subjects = ["Science", "Computer Science", "Social Studies", "Mathematics", "Other Categories"]
 
@@ -14,17 +15,18 @@ function Category() {
 
             <Menu.Items>
                 <div className='flex flex-col border-[1px] border-themetext rounded w-[156px] p-3 space-y-4 '>
-                    {subjects.map((subject) => (
-
-                        <Menu.Item>
-                            {({ active }) => (
-                                <Link href={subject}
-                                    className={`${active && 'bg-blue-500'}`}
-                                >
-                                    {subject}
-                                </Link>
-                            )}
-                        </Menu.Item>
+                    {subjects.map((subject: string, index: number) => (
+                        <React.Fragment key={index}>
+                            <Menu.Item >
+                                {({ active }) => (
+                                    <Link href={subject}
+                                        className={`${active && 'bg-blue-500'}`}
+                                    >
+                                        {subject}
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                        </React.Fragment>
                     ))}
                 </div>
 
