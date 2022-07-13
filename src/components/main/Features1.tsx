@@ -6,7 +6,7 @@ const Features1 = () => {
     return (
         <div className="relative hidden xl:block w-full h-[146.5px] ">
             <div className="absolute -top-40 xl:-top-40   ">
-                <div className="flex mx-[3.4vw] xl:mx-[50px] justify-evenly items-baseline xl:space-x-[2.4vw] xxl:space-x-[2.778vw] ">
+                <div className="flex mx-[3.4vw] xl:mx-[3.472vw] justify-evenly items-baseline xl:space-x-[2.4vw] xxl:space-x-[2.778vw] ">
                     <div className="relative  xl:w-[21.445vw] xl:h-[20.602vw] xxl:w-[21.181vw] xxl:h-[293px] bg-white rounded-lg shadow-xl">
                         <div className="absolute top-0 w-full h-full left-0 flex  flex-col items-center justify-center space-y-2">
                             <div>

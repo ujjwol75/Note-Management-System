@@ -5,6 +5,9 @@ import Link from 'next/link';
 
 
 const Navbar = () => {
+
+    const [activeLink, setActiveLink] = useState("home");
+
     const [isOpen, setIsopen] = useState(false);
     return (
         <div>
@@ -13,9 +16,10 @@ const Navbar = () => {
 
 
                     <Link href="/">
-                        <div className="cursor-pointer relative h-[30px] w-[160px]    xs:h-[45.29px] xs:w-[224.3px]">
+                        <div className="cursor-pointer relative h-[30px] w-[160px] xs:h-[45.29px] xs:w-[224.3px]"  >
                             <Image src='/logo.png' alt="cover image" layout="fill" />
                         </div>
+
                     </Link>
                     {(!isOpen) ? (
                         <div className="lg:hidden">
@@ -34,12 +38,12 @@ const Navbar = () => {
                     }
                     <div className=" lg:flex hidden space-x-6 xl:space-x-[40px] text-[16px] cursor-pointer font-Jost font-normal  ">
                         <Link href='Main'>
-                            <div className="">
+                            <div className={`${activeLink == "home" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("main")} >
                                 <span className="">Home</span>
                             </div>
                         </Link>
                         <Link href="Notes">
-                            <div className="ease-in duration-300">
+                            <div className={`${activeLink == "notes" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("notes")}>
                                 <span>Notes</span>
                             </div>
                         </Link>

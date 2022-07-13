@@ -4,7 +4,7 @@ const Work = () => {
     return (
         <div className="w-full h-full my-[50px] lg:my-0 ">
             <div className='flex flex-col lg:flex-row h-full lg:h-[726px]  mx-[22px] sm:mx-[55px] md:mx-[65px] lg:mx-[80px] xl:mx-[125px] text-themetext'>
-                <div className="flex items-center  xl:w-full order-2 lg:order-1 py-8">
+                <div className="flex items-center justify-center  xl:w-full order-2 lg:order-1 py-8">
                     <div className="relative  lg:h-[311px] lg:w-[330px] xl:h-[494px] xl:w-[507px]  w-[330px] h-[311px] ">
                         <Image src='/work.png' alt="image" layout='fill'></Image>
                     </div>
