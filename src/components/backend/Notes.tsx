@@ -130,8 +130,8 @@ export default function Notes() {
                                     </tr>
                                 </thead>
                                 <tbody className='text-[15px] font-Inter font-normal'>
-                                    {lists.map((list) => (
-                                        <tr className="border-b">
+                                    {lists.map((list: any, index: number) => (
+                                        <tr key={index} className="border-b">
                                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
                                             <td className=" px-6 py-4 whitespace-nowrap font-Inter">
                                                 {list.title}
