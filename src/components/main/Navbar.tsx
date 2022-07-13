@@ -8,6 +8,8 @@ const Navbar = () => {
 
     const [activeLink, setActiveLink] = useState("home");
 
+    console.log(activeLink);
+
     const [isOpen, setIsopen] = useState(false);
     return (
         <div>
@@ -38,7 +40,7 @@ const Navbar = () => {
                     }
                     <div className=" lg:flex hidden space-x-6 xl:space-x-[40px] text-[16px] cursor-pointer font-Jost font-normal  ">
                         <Link href='Main'>
-                            <div className={`${activeLink == "home" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("main")} >
+                            <div className={`${activeLink == "home" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("home")} >
                                 <span className="">Home</span>
                             </div>
                         </Link>
