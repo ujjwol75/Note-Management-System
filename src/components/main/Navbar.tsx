@@ -12,7 +12,7 @@ const Navbar = () => {
                 <div className="flex items-center  mx-[14px] sm:mx-[22px] md:mx-[26px] lg:mx-[32px] xl:mx-[50px]   justify-between h-[70px] sm:h-[100px]  ">
 
 
-                    <Link href="Main">
+                    <Link href="/">
                         <div className="cursor-pointer relative h-[30px] w-[160px]    xs:h-[45.29px] xs:w-[224.3px]">
                             <Image src='/logo.png' alt="cover image" layout="fill" />
                         </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
                             </div>
                         </Link>
                         <Link href="Notes">
-                            <div className="">
+                            <div className="ease-in duration-300">
                                 <span>Notes</span>
                             </div>
                         </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
 
                 <div className=" h-full w-full bg-theme lg:hidden -mt-1">
                     <div className="flex flex-col items-center    sm:items-center sm:justify-evenly text-white">
-                        <Link href='Main'>
+                        <Link href=''>
                             <div className="mx-3 mb-4 text-[16px] cursor-pointer">
                                 <span >Home</span>
 
