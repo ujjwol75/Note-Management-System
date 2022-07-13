@@ -13,6 +13,7 @@ import ToastNotification from "../../components/reusable/ToastNotification";
 export default function Signup() {
   const [message, setMessage] = useState("");
   const [show, setShow] = useState(false)
+  const [types, setTypes] = useState("")
   const router = useRouter();
 
   const signUpHandler = async (data: any) => {
@@ -27,14 +28,16 @@ export default function Signup() {
       router.push("/Signin");
       setMessage("Login Successful!!");
       setShow(true)
+      setTypes("succes")
     } else {
       setMessage("Something went wrong!!!");
       setShow(true)
+      setTypes("error")
     }
   };
   return (
     <>
-      <ToastNotification types={"success"} show={show} message={message} />
+      <ToastNotification types={types} show={show} message={message} />
       <Signupcomponent signUpHandler={signUpHandler} message={message} />
     </>
   );
