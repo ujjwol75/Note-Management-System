@@ -5,7 +5,7 @@ export default function Testimonial() {
     const [count, setCount] = useState(1);
 
     return (
-        <div className='my-14'>
+        <div className=' my-5 lg:my-8'>
             <div className='flex flex-col items-center justify-center'>
                 <div className='text-[#37474F] text-center'>
                     <p className='text-2xl sm:text-3xl lg:text-heading  font-bold font-Jost mb-4 text-center'>Trusted by Best Readers</p>
@@ -17,7 +17,7 @@ export default function Testimonial() {
             </div>
 
 
-            <div className=' flex flex-col sm:flex-row items-center justify-between my-6 mx-[22px] sm:mx-[55px] md:mx-[65px] lg:mx-[80px] xl:mx-[125px] text-themetext sm:space-x-[40px] space-y-5 sm:space-y-0 '>
+            <div className=' flex flex-col sm:flex-row items-center justify-between my-6 mx-[22px] sm:mx-[55px] md:mx-[65px] lg:mx-[80px] xl:mx-[125px] text-themetext sm:space-x-[40px] space-y-5 sm:space-y-0 xxl:justify-center '>
                 <div className='w-full h-full  xl:w-[575px] xl:h-[321px] flex flex-col border-[#CCCCCC] hover:border-theme border-[1px] rounded-lg p-3 md:p-5 lg:p-10 '>
                     <div className='flex items-center justify-start space-x-4 '>
                         <div className='relative h-14 w-14 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-24 lg:h-24 '>

@@ -71,7 +71,7 @@ const Navbar = () => {
                         </div>
                         <Link href="Signin">
                             <div>
-                                <button className="bg-button h-[45px] rounded-[5px] w-[145px] text-base font-Inter font-normal ">Login/Signup</button>
+                                <button className="bg-button h-[45px] rounded-[5px] w-[145px] text-base font-Jost font-normal ">Login/Signup</button>
                             </div>
                         </Link>
                     </div>
