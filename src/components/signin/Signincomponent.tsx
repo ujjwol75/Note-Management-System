@@ -91,7 +91,7 @@ const Signincomponent = (props: Props) => {
                       type="email"
                       name="email"
                     />
-                    <ErrorMessage name="email" component="div" className="help-block errors" />
+                    <ErrorMessage name="email" component="div" className="text-sky-300" />
                   </label>
                 </div>
                 <div className="mt-9">
@@ -118,7 +118,6 @@ const Signincomponent = (props: Props) => {
                     login
                   </button>
                 </div>
-
                 <div>
                   <p className=" leading-6 font-Inter text-[#ABABAB] text-sm mt-2 ml-2">
                     Don’t you have an account?
