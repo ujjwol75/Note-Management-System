@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ButtonComponent from '../components/main/ButtonComponent'
+import ButtonComponent from '../../components/main/ButtonComponent'
 import Link from 'next/link'
 export default function Login() {
     return (
