@@ -10,8 +10,6 @@ export default function Dashboard() {
                 <Search />
                 <Notes />
             </div>
-
         </div>
-
     )
 }

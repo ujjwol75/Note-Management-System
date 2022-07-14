@@ -26,7 +26,6 @@ export const postApiData = async (data: any) => {
         // },
         transformResponse: [
           function (responseData) {
-            //Do whatever you want to transform the data
             return JSON.parse(responseData);
           },
         ],
@@ -37,3 +36,5 @@ export const postApiData = async (data: any) => {
     }
     return response;
   };
+
+//get data from api
