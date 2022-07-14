@@ -26,20 +26,18 @@ const formValidation = Yup.object().shape({
     .required("Password is Required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   username: Yup.string().required("Username is required!"),
-  confirm_password: Yup.string().required("Confirm password is required!")
-
+  confirm_password: Yup.string().required("Confirm password is required!"),
 });
 
 const Signupcomponent = (props: Props) => {
   const { signUpHandler, message } = props;
-
   return (
     <Formik
       initialValues={signupFormInitalValue}
       validationSchema={formValidation}
-      onSubmit={signUpHandler}
+      onSubmit={(data, props) => signUpHandler(data, props)}
     >
-      {(values) => (
+      {({ values, errors, touched }) => (
         <div>
           <Form>
             <div className="grid sm:grid-cols-8 ">
@@ -49,11 +47,12 @@ const Signupcomponent = (props: Props) => {
                     <Image src="/logo.png" alt="logo" width={220} height={50} />
                   </div>
                 </Link>
+           
                 <div>
                   <Image
                     className="object-cover object-right"
                     alt="login page"
-                    src="/login page.png"
+                    src="/loginpage.png"
                     layout="fill"
                   ></Image>
                 </div>
@@ -99,6 +98,7 @@ const Signupcomponent = (props: Props) => {
                         type="text"
                         name="username"
                       />
+
                       <ErrorMessage name="username" component="div" />
                     </label>
                   </div>
@@ -146,7 +146,10 @@ const Signupcomponent = (props: Props) => {
                         type="number"
                         name="phone"
                       />
-                      <ErrorMessage name="phone" component="div" />
+                      {errors.phone && touched.phone && (
+                        <div>{errors.phone}</div>
+                      )}
+                      {/* <ErrorMessage name="phone" component="div" /> */}
                     </label>
                   </div>
                 </div>

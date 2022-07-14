@@ -47,7 +47,7 @@ const Signincomponent = (props: Props) => {
                   <Image
                     className="object-cover object-right"
                     alt="loginpage"
-                    src="/login page.png"
+                    src="/loginpage.png"
                     layout="fill"
                   ></Image>
                 </div>

@@ -12,11 +12,9 @@ import ToastNotification from "../../components/reusable/ToastNotification";
 
 export default function Signup() {
   const [message, setMessage] = useState("");
-  const [show, setShow] = useState(false)
-  const [types, setTypes] = useState("")
   const router = useRouter();
 
-  const signUpHandler = async (data: any) => {
+  const signUpHandler = async (data: any, props:any) => {
     const url = APIS.REGISTER;
     console.log(url, "url");
     const formData = data;
@@ -26,18 +24,30 @@ export default function Signup() {
     console.log("response", response);
     if (response.status === 200 || response.status === 201) {
       router.push("/Signin");
-      setMessage("Login Successful!!");
-      setShow(true)
-      setTypes("succes")
+      toast.success("Login Success", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
     } else {
-      setMessage("Something went wrong!!!");
-      setShow(true)
-      setTypes("error")
+      toast.error("Something went wrong!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
     }
   };
   return (
     <>
-      <ToastNotification types={types} show={show} message={message} />
+     <ToastContainer />
       <Signupcomponent signUpHandler={signUpHandler} message={message} />
     </>
   );
