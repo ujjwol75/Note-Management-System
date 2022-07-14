@@ -25,33 +25,33 @@ const Navbar = () => {
                     </Link>
                     {(!isOpen) ? (
                         <div className="lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 xs:h-10 xs:w-10" onClick={() => setIsopen(true)} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 xs:h-10 xs:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </div>
                     ) :
                         (
                             <div className="lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 xs:h-10 xs:w-10" onClick={() => setIsopen(false)} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 xs:h-10 xs:w-10"  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </div>
                         )
                     }
-                    <div className=" lg:flex hidden space-x-6 xl:space-x-[40px] text-[16px] cursor-pointer font-Jost font-normal  ">
+                    <div className=" lg:flex hidden space-x-6 xl:space-x-[40px] text-[16px]  font-Jost font-normal cursor-pointer ">
                         <Link href='Main'>
-                            <div className={`${activeLink == "home" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("home")} >
-                                <span className="">Home</span>
+                            <div className={`${activeLink == "home" ? 'underline decoration-[2px] decoration-button underline-offset-[12px] cursor-pointer' : ''}`} onClick={() => setActiveLink("home")} >
+                                <span className="cursor-pointer">Home</span>
                             </div>
                         </Link>
                         <Link href="Notes">
                             <div className={`${activeLink == "notes" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("notes")}>
-                                <span>Notes</span>
+                                <span className="cursor-pointer">Notes</span>
                             </div>
                         </Link>
                         <Link href="Trendingnotes" className="cursor-pointer ">
-                            <div className="">
-                                <span>Trending Notes</span>
+                            <div className={`${activeLink == "trendingnotes" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("trendingnotes")}>
+                                <span>Trendingnotes</span>
                             </div>
                         </Link>
                         <Link href="Contactus">
@@ -88,7 +88,7 @@ const Navbar = () => {
 
 
                 <div className=" h-full w-full bg-theme lg:hidden -mt-1">
-                    <div className="flex flex-col items-center    sm:items-center sm:justify-evenly text-white">
+                    <div className="flex flex-col items-center  sm:items-center sm:justify-evenly text-white">
                         <Link href=''>
                             <div className="mx-3 mb-4 text-[16px] cursor-pointer">
                                 <span >Home</span>

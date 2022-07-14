@@ -6,10 +6,10 @@ import Notecover from '../components/notes/Notecover';
 export default function Notes() {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <Notecover detail="Notes" />
             <Courses />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
