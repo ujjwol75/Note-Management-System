@@ -52,8 +52,8 @@ export default function Authorlist() {
                 <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                         <div className="overflow-y-auto">
-                            <table className="min-w-full">
-                                <thead className="border-b bg-theme rounded-t-md font-Jost font-light text-white text-[15px]">
+                            <table className="min-w-full rounded-t-md">
+                                <thead className="border-b bg-theme rounded-t-md font-Jost font-light text-white text-[15px] ">
                                     <tr>
                                         <th scope="col" className="  px-6 py-4 text-left">
                                             S.No
