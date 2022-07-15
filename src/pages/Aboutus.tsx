@@ -8,12 +8,10 @@ import Testimonial from '../components/main/Testimonial'
 export default function Aboutus() {
     return (
         <>
-            <Navbar />
             <Notecover detail="About Us" />
             <Goal />
             <Built />
             <Testimonial />
-            <Footer />
 
         </>
     )

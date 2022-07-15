@@ -1,15 +1,16 @@
-import React, { Children } from 'react'
+import React from 'react'
 import Footer from '../components/main/Footer'
 import Navbar from '../components/main/Navbar'
-import Main from '../pages/Main'
 
-type Props = {}
+type Props = {
+  children: any
+}
 
-const Layout = (props: Props) => {
+const Layout = ({children}: Props) => {
   return (
     <div>
         <Navbar />
-          <Main>{Children}</Main>
+        {children}
         <Footer />
     </div>
   )

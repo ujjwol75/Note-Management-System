@@ -7,11 +7,9 @@ import PriceRating from '../components/main/PriceRating'
 export default function Contactus() {
     return (
         <div>
-            {/* <Navbar /> */}
             <Notecover detail="Contact us" />
 
             <Drop />
-            {/* <Footer /> */}
         </div>
     )
 }

@@ -88,7 +88,8 @@ const lists = [
 
 export default function Notes() {
     return (
-        <div className=' relative p-4 h-[662px] w-[1136px] bg-white rounded-lg ' >
+       
+        <div className=' relative p-4 h-[662px] w-full bg-white rounded-lg overflow-x-auto' >
             <div className='flex justify-between items-start'>
                 <h2 className='font-Inter text-lg font-medium'>Notes list</h2>
                 <div className='flex space-x-5'>
@@ -96,11 +97,12 @@ export default function Notes() {
                     <Category />
                 </div>
             </div>
-            <div className="flex flex-col">
-                <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div className="flex flex-col ">
+                <div className=" sm:-mx-6 lg:-mx-8">
                     <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                        <div className="overflow-y-auto">
-                            <table className="min-w-full">
+                        
+                        <div className="overflow-x ">
+                            <table className="min-w-full overflow-scroll">
                                 <thead className="border-b bg-theme  font-Jost font-light text-white text-[15px]">
                                     <tr>
                                         <th scope="col" className="  px-6 py-4 text-left">
@@ -164,6 +166,7 @@ export default function Notes() {
                                 </tbody>
                             </table>
                         </div>
+
                     </div>
                 </div>
             </div >

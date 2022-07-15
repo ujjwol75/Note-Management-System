@@ -16,13 +16,12 @@ const Navbar = () => {
             <div className=" relative  w-full text-[#FFFFFF] bg-theme ">
                 <div className="flex items-center  mx-[14px] sm:mx-[22px] md:mx-[26px] lg:mx-[32px] xl:mx-[50px]   justify-between h-[70px] sm:h-[100px]  ">
 
-
-                    <Link href="/">
-                        <div className="cursor-pointer relative h-[30px] w-[160px] xs:h-[45.29px] xs:w-[224.3px]"  >
+                        <div className="cursor-pointer relative xs:h-[45.29px] xs:w-[224.3px]"  >
+                        <Link href="/">
                             <Image src='/logo.png' alt="cover image" layout="fill" />
+                            </Link>
                         </div>
 
-                    </Link>
                     {(!isOpen) ? (
                         <div className="lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 xs:h-10 xs:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -55,13 +54,13 @@ const Navbar = () => {
                             </div>
                         </Link>
                         <Link href="Contactus">
-                            <div className="">
+                            <div className={`${activeLink == "contactus" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("contactus")}>
                                 <span>Contact us</span>
                             </div>
                         </Link>
 
                         <Link href="Aboutus">
-                            <div className="">
+                            <div className={`${activeLink == "aboutus" ? 'underline decoration-[2px] decoration-button underline-offset-[12px]' : ''}`} onClick={() => setActiveLink("aboutus")}>
                                 <span>About us</span>
                             </div>
                         </Link>
