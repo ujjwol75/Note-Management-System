@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-// import Sidebar from '../components/Sidebar/Sidebar'
 import APIS from "../helpers/EndPoints";
 import { getKey } from "../helpers/sessionKey";
 import useGetHook from "../hooks/useGetHooks";
@@ -44,7 +43,6 @@ const DashboardLayout = (props: Props) => {
       {loadPage ? (
         <div className="flex bg-[#EEF1F8] p-[30px] space-x-[20px]">
           <Sidebar />
-
           <div className="space-y-[30px]">
             {showSearch ? <Search userData={currentUserData} /> : null}
             <div>
