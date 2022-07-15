@@ -1,8 +1,38 @@
-import '../../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../../styles/globals.css";
+import type { AppProps } from "next/app";
+import { QueryClient, QueryClientProvider } from "react-query";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import { ToastContainer } from "react-toastify";
+import Navbar from "../components/main/Navbar";
+import Footer from "../components/main/Footer";
+import Main from "./Main";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const queryClient = new QueryClient();
+
+function MyApp({ Component, pageProps, ...appProps }: AppProps) {
+  // return <Component {...pageProps} />
+
+  if (
+    [`/Dashboard`, `/Authors`, `/Readers`, `/Transitions`].includes(
+      appProps.router.pathname
+    )
+  ) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <DashboardLayout>
+          <Component {...pageProps} />
+        </DashboardLayout>
+        <ToastContainer autoClose={1500} />
+      </QueryClientProvider>
+    );
+  } else {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+        <ToastContainer autoClose={1500} />
+      </QueryClientProvider>
+    );
+  }
 }
 
-export default MyApp
+export default MyApp;

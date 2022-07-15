@@ -3,12 +3,11 @@ import Signincomponent from "../../components/signin/Signincomponent";
 import APIS from "../../helpers/EndPoints";
 import { useRouter } from "next/router";
 import { postApiData } from "../../helpers/AxiosInstances";
-import {setKey } from "../../helpers/sessionKey";
+import { setKey } from "../../helpers/sessionKey";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
-
   const router = useRouter();
 
   const signInHandler = async (data: any) => {
@@ -17,21 +16,18 @@ export default function Login() {
     const requestMethod = "POST";
     const response = await postApiData({ url, formData, requestMethod });
     console.log("response", response);
-
-    useEffect(()=> {
-      if (response?.status === 200 || response.status === 201) {
-        const userAuth = {
-          accessToken: response?.data.access,
-          refressToken: response.data.refresh,
-        };
-        setKey("userAuth", JSON.stringify(userAuth))
-        toast.success("Login Success!!")
-        router.push('/Dashboard');
-      }else{
-        toast.error("Login Falil!")
-      }
-
-    },[history])
+    if (response?.status === 200 || response.status === 201) {
+      const userAuth = {
+        accessToken: response?.data.access,
+        refressToken: response.data.refresh,
+      };
+      console.log(userAuth, "useAuth");
+      setKey("userAuth", JSON.stringify(userAuth));
+      toast.success("Login Success!!");
+      router.push("/Dashboard");
+    } else {
+      toast.error(response?.data.detail || "Login Fail!");
+    }
   };
   return (
     <>

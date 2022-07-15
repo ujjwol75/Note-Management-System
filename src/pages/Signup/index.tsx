@@ -30,7 +30,7 @@ export default function Signup() {
         progress: undefined,
       })
     } else {
-      toast.error("Something went wrong!", {
+      toast.error(response?.data.detail, {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
