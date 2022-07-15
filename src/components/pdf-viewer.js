@@ -1,13 +1,11 @@
 import { useState } from "react";
-// import default react-pdf entry
 import { Document, Page, pdfjs,StyleSheet } from "react-pdf";
-// import pdf worker as a url, see `next.config.js` and `pdf-worker.js`
 import workerSrc from "../../pdf-worker"
 
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export default function PDFViewer() {
-  const [file, setFile] = useState("./sample1.pdf");
+  const [file, setFile] = useState("./testing.pdf");
   const [numPages, setNumPages] = useState(null);
 
   function onFileChange(event) {

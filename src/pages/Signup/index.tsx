@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import ButtonComponent from "../../components/main/ButtonComponent";
 import { useRouter } from "next/router";
 import APIS from "../../helpers/EndPoints";
 import { postApiData } from "../../helpers/AxiosInstances";
 import Signupcomponent from "../../components/signup/Signupcomponent";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ToastNotification from "../../components/reusable/ToastNotification";
 
 export default function Signup() {
   const [message, setMessage] = useState("");

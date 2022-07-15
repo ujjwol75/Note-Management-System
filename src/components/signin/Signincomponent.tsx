@@ -14,7 +14,7 @@ const signInInitialValues = {
 
 const formValidation = Yup.object().shape({
   password: Yup.string()
-    .min(8, "Password is Short!")
+    .min(2, "Password is Short!")
     .max(50, "Password too long!")
     .required("Password is Required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
