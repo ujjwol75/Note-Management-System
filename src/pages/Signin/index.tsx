@@ -3,7 +3,7 @@ import Signincomponent from "../../components/signin/Signincomponent";
 import APIS from "../../helpers/EndPoints";
 import { useRouter } from "next/router";
 import { postApiData } from "../../helpers/AxiosInstances";
-import { setKey } from "../../helpers/sessionKey";
+import { getKey, setKey } from "../../helpers/sessionKey";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -21,7 +21,6 @@ export default function Login() {
         accessToken: response?.data.access,
         refressToken: response.data.refresh,
       };
-      console.log(userAuth, "useAuth");
       setKey("userAuth", JSON.stringify(userAuth));
       toast.success("Login Success!!");
       router.push("/Dashboard");

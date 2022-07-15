@@ -17,27 +17,27 @@ const DashboardLayout = (props: Props) => {
 
   // PASS THIS TO CHILDREN PAGES AND USE USE_EFFECT TO SHOW/HIDE SEARCH BAR
   const [showSearch, setShowSearch] = useState(true);
-  const [loadPage, setLoadPage] = useState(true);
+  const [loadPage, setLoadPage] = useState(false);
 
   // Cloning childern attribute to pass props
   const childrenWithAdjustedProps = React.Children.map(children, (child) =>
     React.cloneElement(child, { showSearch, setShowSearch })
   );
 
-  //   const { isLoading: currentUserLoading, data: currentUserData } = useGetHook({
-  //     queryKey: 'currentUserData',
-  //     url: APIS.CURRENT_USER_PROFILE,
-  //     parma: "",
-  //     auth: true
-  //   });
+  const { isLoading: currentUserLoading, data: currentUserData } = useGetHook({
+    queryKey: "currentUserData",
+    url: APIS.CURRENT_USER,
+    parma: "",
+    auth: true,
+  });
 
-    useEffect(() => {
-      if (!getKey("userAuth")) {
-        router.push("/Signin");
-      } else {
-        setLoadPage(true);
-      }
-    }, []);
+  useEffect(() => {
+    if (!getKey("userAuth")) {
+      router.push("/Signin");
+    } else {
+      setLoadPage(true);
+    }
+  }, []);
 
   return (
     <>
@@ -46,7 +46,7 @@ const DashboardLayout = (props: Props) => {
           <Sidebar />
 
           <div className="space-y-[30px]">
-            {showSearch ? <Search /> : null}
+            {showSearch ? <Search userData={currentUserData} /> : null}
             <div>
               <main>{childrenWithAdjustedProps}</main>
             </div>
