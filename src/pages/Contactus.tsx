@@ -1,9 +1,8 @@
 import React from 'react'
-import Navbar from '../components/main/Navbar'
-import Notecover from '../components/notes/Notecover'
-import Footer from '../components/main/Footer'
-import Drop from '../components/contact/Drop'
-import PriceRating from '../components/main/PriceRating'
+import Navbar from '../components/frontend/main/Navbar'
+import Notecover from '../components/frontend/notes/Notecover'
+import Footer from '../components/frontend/main/Footer'
+import Drop from '../components/frontend/contact/Drop'
 export default function Contactus() {
     return (
         <div>

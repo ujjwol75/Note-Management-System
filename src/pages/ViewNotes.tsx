@@ -1,9 +1,7 @@
 import React from 'react'
-import Sidebar from '../components/backend/Sidebar'
-import Search from '../components/backend/Search'
-import ViewNote from '../components/backend/notes/ViewNotes'
-
-
+import Sidebar from '../components/backend/admin/Sidebar'
+import Search from '../components/backend/admin/Search'
+import ViewNote from '../components/backend/admin/notes/ViewNote'
 export default function ViewNotes() {
     return (
         <div className='flex bg-[#EEF1F8] p-[30px] space-x-[20px]'>

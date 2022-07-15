@@ -1,7 +1,7 @@
 import React from 'react';
-import Search from '../components/backend/Search';
-import Sidebar from '../components/backend/Sidebar';
-import Authorlist from '../components/backend/author/Authorlist';
+import Search from '../components/backend/admin/Search';
+import Sidebar from '../components/backend/admin/Sidebar';
+import Authorlist from '../components/backend/admin/author/Authorlist';
 
 
 export default function Authors() {

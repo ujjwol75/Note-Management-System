@@ -1,7 +1,7 @@
 import React from 'react'
-import Search from '../components/backend/Search'
-import Sidebar from '../components/backend/Sidebar'
-import Transition from '../components/backend/transition/Transition'
+import Search from '../components/backend/admin/Search'
+import Sidebar from '../components/backend/admin/Sidebar'
+import Transition from '../components/backend/admin/transition/Transition'
 
 
 

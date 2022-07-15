@@ -1,7 +1,7 @@
 import React from 'react';
-import Search from '../components/backend/Search';
-import Sidebar from '../components/backend/Sidebar';
-import Readerlist from '../components/backend/readers/Readerlist';
+import Search from '../components/backend/admin/Search';
+import Sidebar from '../components/backend/admin/Sidebar';
+import Readerlist from '../components/backend/admin/readers/Readerlist';
 
 
 export default function Readers() {

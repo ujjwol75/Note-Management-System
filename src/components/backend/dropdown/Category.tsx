@@ -6,7 +6,6 @@ const subjects = ["Science", "Computer Science", "Social Studies", "Mathematics"
 
 function Category() {
     return (
-        <div className='absolute top-2 right-4'>
             <Menu>
                 <Menu.Button className="w-[156px] p-1 h-[38px] rounded-lg border-[1px] border-themetext flex items-center justify-evenly font-Inter font-normal">
                     By Category
@@ -19,7 +18,7 @@ function Category() {
                         {subjects.map((subject: string, index: number) => (
                             <React.Fragment key={index}>
                                 <Menu.Item >
-                                    {({ active }) => (
+                                    {({ active }:any) => (
                                         <Link href={subject}
                                             className={`${active && 'bg-blue-500'}`}
                                         >
@@ -33,7 +32,6 @@ function Category() {
 
                 </Menu.Items>
             </Menu>
-        </div>
     )
 }
 export default Category;
