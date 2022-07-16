@@ -7,7 +7,7 @@ type Props = {
 
 export default function search(props: Props) {
   const { userData } = props;
-  
+
   return (
     <div className="w-[1136px] h-[60px] p-4 rounded-lg flex item-center justify-between bg-white">
       <div className="flex">

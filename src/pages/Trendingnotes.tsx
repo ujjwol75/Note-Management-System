@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../components/main/Navbar'
-import Notecover from '../components/notes/Notecover'
-import Footer from '../components/main/Footer'
-import Courses from '../components/main/Courses'
+import Navbar from '../components/frontend/main/Navbar'
+import Notecover from '../components/frontend/notes/Notecover'
+import Footer from '../components/frontend/main/Footer'
+import Courses from '../components/frontend/main/Courses'
 
 export default function Trendingnotes() {
     return (
