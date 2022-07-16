@@ -94,8 +94,8 @@ export default function Notes() {
       <div className="flex flex-col">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-            <div className="overflow-y-auto">
-              <table className="min-w-full">
+            <div className="relative overflow-x-auto  sm:rounded-lg border border-[#EDEDED]">
+              <table className="w-full">
                 <thead className="border-b bg-theme  font-Jost font-light text-white text-[15px]">
                   <tr>
                     <th scope="col" className="  px-6 py-4 text-left">
@@ -177,7 +177,4 @@ export default function Notes() {
   );
 }
 
-{
-  /* <div className='h-[515px] w-full overflow-auto'>
-                                                </div> */
-}
+

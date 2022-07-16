@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { list } from "postcss";
 
 const lists = [
   {
@@ -46,6 +47,22 @@ const table_head_list = [
   { name: "Status" },
   { name: "Action" },
 ];
+
+const table_body_descriptions = [
+  { name: 1 },
+  { name: "list.name" },
+  { name: "list.email" },
+  { name: "list.phone" },
+  { name: "list.address" },
+  { name: "list.date" },
+  { name: "list.notes" },
+];
+
+const Tdes = (val: any) => (
+  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+    {val}
+  </td>
+);
 type Props = {
   authorLists: any;
 };
@@ -68,25 +85,25 @@ export default function Authorlist(props: Props) {
                   </tr>
                 </thead>
                 <tbody className="text-[15px] font-Inter font-normal">
-                  {lists.map((list: any, index: number) => (
+                  {authorLists?.map((list: any, index: number) => (
                     <tr key={index} className="border-b">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        1
+                        {index + 1}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
-                        {list.name}
+                        {list.user.profile?.full_name}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
-                        {list.email}
+                        {list.user.email}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
-                        {list.phone}
+                        {list.user.mobile_number}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
                         {list.address}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
-                        {list.date}
+                        {list.user.date_joined}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
                         {list.notes}

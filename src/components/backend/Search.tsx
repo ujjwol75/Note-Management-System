@@ -9,7 +9,7 @@ export default function search(props: Props) {
   const { userData } = props;
 
   return (
-    <div className="w-[1136px] h-[60px] p-4 rounded-lg flex item-center justify-between bg-white">
+    <div className="relative bg-white px-6 py-4 flex justify-between items-center rounded-md placeholder-Header text-lg">
       <div className="flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"

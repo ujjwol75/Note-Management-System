@@ -42,10 +42,22 @@ const DashboardLayout = (props: Props) => {
     <>
       {loadPage ? (
         <div className="flex bg-[#EEF1F8] p-[30px] space-x-[20px]">
-          <Sidebar />
-          <div className="space-y-[30px]">
-            {showSearch ? <Search userData={currentUserData} /> : null}
-            <div>
+          <div className="p-5 bg-white rounded-xl h-[94vh] mx-2">
+            <Sidebar />
+          </div>
+          <div className="col-span-5">
+            {showSearch ? (
+              <div className="mb-5">
+                <Search userData={currentUserData} />
+              </div>
+            ) : null}
+            <div
+              className={`bg-white rounded-md p-6 ${
+                showSearch
+                  ? "min-h-[82vh] max-h-[82vh]"
+                  : "min-h-[94vh] max-h-[94vh]"
+              }  overflow-y-auto no-scrollbar`}
+            >
               <main>{childrenWithAdjustedProps}</main>
             </div>
           </div>
