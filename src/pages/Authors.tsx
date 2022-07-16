@@ -16,7 +16,7 @@ export default function Authors() {
   console.log(authorListDatas, "authorlist datas");
   return (
     <div>
-      <Authorlist />
+      <Authorlist authorLists={authorListDatas}/>
     </div>
   );
 }

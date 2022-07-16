@@ -36,7 +36,21 @@ const lists = [
   },
 ];
 
-export default function Authorlist() {
+const table_head_list = [
+  { name: "S.NO" },
+  { name: "Title" },
+  { name: "Category" },
+  { name: "List" },
+  { name: "Readers" },
+  { name: "Date" },
+  { name: "Status" },
+  { name: "Action" },
+];
+type Props = {
+  authorLists: any;
+};
+export default function Authorlist(props: Props) {
+  const { authorLists } = props;
   return (
     <div className="p-4 h-[662px] w-[1136px] bg-white rounded-lg ">
       <div className="flex flex-col ">
@@ -46,30 +60,11 @@ export default function Authorlist() {
               <table className="min-w-full rounded-t-md">
                 <thead className="border-b bg-theme rounded-t-md font-Jost font-light text-white text-[15px] ">
                   <tr>
-                    <th scope="col" className="  px-6 py-4 text-left">
-                      S.No
-                    </th>
-                    <th scope="col" className="px-6 py-4 text-left">
-                      Title
-                    </th>
-                    <th scope="col" className=" px-6 py-4 text-left">
-                      Category
-                    </th>
-                    <th scope="col" className=" px-6 py-4 text-left">
-                      list
-                    </th>
-                    <th scope="col" className=" px-6 py-4 text-left">
-                      Readers
-                    </th>
-                    <th scope="col" className=" px-6 py-4 text-left">
-                      Date
-                    </th>
-                    <th scope="col" className=" px-6 py-4 text-left">
-                      Status
-                    </th>
-                    <th scope="col" className=" px-6 py-4 text-left">
-                      Action
-                    </th>
+                    {table_head_list.map((item) => (
+                      <th scope="col" className="  px-6 py-4 text-left">
+                        {item.name}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="text-[15px] font-Inter font-normal">
