@@ -8,6 +8,7 @@ import CustomeDropdown from "../reusable/formikComponent/CustomeDropdown";
 import { Signup_formValidation } from "../formikvalidation/Formikfromvalidation";
 import { CustomeButton } from "../reusable/buttons/CustomeButton";
 import FormHeader from "../reusable/formheader/FormHeader";
+import SideImagePanel from "../reusable/sideimagepanel/SideImagePanel"
 
 type Props = {
   signUpHandler: any;
@@ -42,22 +43,7 @@ const Signupcomponent = (props: Props) => {
         <div>
           <Form>
             <div className="grid sm:grid-cols-8 ">
-              <div className="object-cover hidden md:inline-block relative z-0 w-full h-[760px] sm:col-span-2 md:col-span-3 lg:col-span-4">
-                <Link href="Main">
-                  <div className="absolute cursor-pointer top-12 left-10 z-10">
-                    <Image src="/logo.png" alt="logo" width={220} height={50} />
-                  </div>
-                </Link>
-
-                <div>
-                  <Image
-                    className="object-cover object-right"
-                    alt="login page"
-                    src="/loginpage.png"
-                    layout="fill"
-                  ></Image>
-                </div>
-              </div>
+              <SideImagePanel/>
               <div className="flex flex-col m-10 mt-32 text-[#323232] space-y-6 col-span-5  md:col-span-5 lg:col-span-4">
                 <Link href="Main">
                   <div className="md:hidden">

@@ -6,6 +6,8 @@ import * as Yup from "yup";
 import { Signin_formValidation } from "../formikvalidation/Formikfromvalidation";
 import CustomeField from "../reusable/formikComponent/CustomeField";
 import { CustomeButton } from "../reusable/buttons/CustomeButton";
+import FormHeader from "../reusable/formheader/FormHeader";
+import SideImagePanel from "../reusable/sideimagepanel/SideImagePanel"
 
 type Props = {
   signInHandler: any;
@@ -27,27 +29,7 @@ const Signincomponent = (props: Props) => {
         {({ values }) => (
           <Form>
             <div className="grid md:grid-cols-8 ">
-              <div className="object-cover hidden md:inline-block relative z-0 w-full h-[760px] sm:col-span-2 md:col-span-3 lg:col-span-4">
-                <Link href="Main">
-                  <div className="absolute cursor-pointer top-12 left-10 z-10">
-                    <Image
-                      src="/logo.png"
-                      alt="logo"
-                      width={228}
-                      height={45}
-                      layout="fixed"
-                    />
-                  </div>
-                </Link>
-                <div>
-                  <Image
-                    className="object-cover object-right"
-                    alt="loginpage"
-                    src="/loginpage.png"
-                    layout="fill"
-                  ></Image>
-                </div>
-              </div>
+              <SideImagePanel/>
               <div className="flex flex-col m-10 md:mt-32 text-[#323232] space-y-6   md:col-span-5 lg:col-span-4">
                 <Link href="Main">
                   <div className="md:hidden">
@@ -68,12 +50,10 @@ const Signincomponent = (props: Props) => {
                   </div>
                 </Link>
                 <div>
-                  <h1 className="sm:leading-[59px] text-4xl  xs:text-5xl font-bold font-Jost">
-                    Welcome Back{" "}
-                  </h1>
-                  <p className="  leading-6 font-Inter text-[#ABABAB]">
-                    Login to your account
-                  </p>
+                  <FormHeader
+                    main_title={"Welcome Back"}
+                    sub_title={"Login to your account"}
+                  />
                 </div>
                 <CustomeField
                   label={"Email"}
