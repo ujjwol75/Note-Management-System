@@ -11,7 +11,7 @@ export default function Authordetails() {
 
             <Sidebar />
             <div className='space-y-[30px]'>
-                <Search />
+                {/* <Search /> */}
                 <Details />
             </div>
 

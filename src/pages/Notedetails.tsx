@@ -10,7 +10,7 @@ export default function Notedetails() {
 
             <Sidebar />
             <div className='space-y-[30px]'>
-                <Search />
+                {/* <Search /> */}
                 <Details />
             </div>
 
