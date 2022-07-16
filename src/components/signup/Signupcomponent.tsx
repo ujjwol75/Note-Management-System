@@ -3,11 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import CustomeField from "../formikComponent/CustomeField";
+import CustomeDropdown from "../formikComponent/CustomeDropdown";
 
 type Props = {
   signUpHandler: any;
   message: any;
 };
+
+const options = [
+  { id: 0, name: "-----" },
+  { id: 1, name: "Teacher" },
+  { id: 2, name: "Student" },
+];
 
 const signupFormInitalValue = {
   username: "",
@@ -26,7 +34,11 @@ const formValidation = Yup.object().shape({
     .required("Password is Required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   username: Yup.string().required("Username is required!"),
-  confirm_password: Yup.string().required("Confirm password is required!"),
+  confirm_password: Yup.string()
+    .oneOf([Yup.ref("password"), ""], "Password must match")
+    .required("Required"),
+  phone: Yup.string().required("Phone number required!"),
+  role: Yup.string().required("Must select one option!"),
 });
 
 const Signupcomponent = (props: Props) => {
@@ -47,7 +59,7 @@ const Signupcomponent = (props: Props) => {
                     <Image src="/logo.png" alt="logo" width={220} height={50} />
                   </div>
                 </Link>
-           
+
                 <div>
                   <Image
                     className="object-cover object-right"
@@ -87,118 +99,57 @@ const Signupcomponent = (props: Props) => {
                   </p>
                 </div>
                 <div className="flex space-x-10 mt-9">
-                  <div>
-                    <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                      Username
-                    </h2>
-                    <label>
-                      <Field
-                        className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                        placeholder="Enter username"
-                        type="text"
-                        name="username"
-                      />
-
-                      <ErrorMessage name="username" component="div" />
-                    </label>
-                  </div>
-                  <div>
-                    <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                      Full Name
-                    </h2>
-
-                    <label>
-                      <Field
-                        className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                        placeholder="Full Name"
-                        type="text"
-                        name="full_name"
-                      />
-                      <ErrorMessage name="full_name" component="div" />
-                    </label>
-                  </div>
+                  {/* Field for username */}
+                  <CustomeField
+                    label={"Username"}
+                    name={"username"}
+                    type={"text"}
+                    fieldname={"Enter username"}
+                  />
+                  {/* Field for full name */}
+                  <CustomeField
+                    label={"Full Name"}
+                    name={"full_name"}
+                    type={"text"}
+                    fieldname={"Full Name"}
+                  />
                 </div>
                 <div className="flex space-x-10 mt-9">
-                  <div>
-                    <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                      Email
-                    </h2>
-                    <label>
-                      <Field
-                        className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                        placeholder="Email"
-                        type="text"
-                        name="email"
-                      />
-                      <ErrorMessage name="email" component="div" />
-                    </label>
-                  </div>
-
-                  <div>
-                    <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                      Phone
-                    </h2>
-
-                    <label>
-                      <Field
-                        className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                        placeholder="Enter phone"
-                        type="number"
-                        name="phone"
-                      />
-                      {errors.phone && touched.phone && (
-                        <div>{errors.phone}</div>
-                      )}
-                      {/* <ErrorMessage name="phone" component="div" /> */}
-                    </label>
-                  </div>
+                  <CustomeField
+                    label={"Email"}
+                    name={"email"}
+                    type={"text"}
+                    fieldname={"Email"}
+                  />
+                  <CustomeField
+                    label={"Phone"}
+                    name={"phone"}
+                    type={"number"}
+                    fieldname={"Phone"}
+                  />
                 </div>
                 <div className="flex space-x-10 mt-9">
-                  <div>
-                    <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                      Role
-                    </h2>
+                  {/* Custome dropdown menu */}
+                  <CustomeDropdown
+                    name={"role"}
+                    options={options}
+                    label={"Role"}
+                  />
 
-                    <label>
-                      <Field
-                        className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                        placeholder="Choose role"
-                        type="text"
-                        name="role"
-                      />
-                      <ErrorMessage name="role" component="div" />
-                    </label>
-                  </div>
-                  <div>
-                    <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                      Password
-                    </h2>
-
-                    <label>
-                      <Field
-                        className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                        placeholder="Enter Password"
-                        type="password"
-                        name="password"
-                      />
-                      <ErrorMessage name="password" component="div" />
-                    </label>
-                  </div>
+                  <CustomeField
+                    label={"Password"}
+                    name={"password"}
+                    type={"password"}
+                    fieldname={"Password"}
+                  />
                 </div>
                 <div>
-                  <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                    Conform Password
-                  </h2>
-
-                  <label>
-                    <Field
-                      className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-72"
-                      placeholder="Conform Password"
-                      type="password"
-                      name="confirm_password"
-                    />
-                    <ErrorMessage name="confirm_password" component="div" />
-                  </label>
+                  <CustomeField
+                    label={"Confirm Password"}
+                    name={"confirm_password"}
+                    type={"password"}
+                    fieldname={"Confirm Password"}
+                  />
                 </div>
 
                 <div>
