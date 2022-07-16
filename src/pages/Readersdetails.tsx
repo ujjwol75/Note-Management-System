@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from '../components/backend/Sidebar'
-import Search from '../components/backend/Search'
-import Details from '../components/backend/readers/Details'
+import Sidebar from '../components/backend/admin/Sidebar'
+import Search from '../components/backend/admin/Search'
+import Details from '../components/backend/admin/readers/Details'
 
 export default function Authordetails() {
     return (

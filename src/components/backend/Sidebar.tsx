@@ -12,12 +12,12 @@ export default function Sidebar() {
   const router = useRouter();
 
   const logoutHandler = () => {
-    const token = sessionStorage?.getItem('userAuth');
+    const token = sessionStorage?.getItem("userAuth");
     if (!token) {
-      router.push('/Signin');
+      router.push("/Signin");
     } else {
-      sessionStorage?.removeItem('userAuth');
-      router.push('/Signin');
+      sessionStorage?.removeItem("userAuth");
+      router.push("/Signin");
     }
   };
 

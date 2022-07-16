@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from '../components/backend/Sidebar'
-import Details from '../components/backend/notes/Details'
-import Search from '../components/backend/Search'
+import Sidebar from '../components/backend/admin/Sidebar'
+import Details from '../components/backend/admin/notes/Details'
+import Search from '../components/backend/admin/Search'
 
 export default function Notedetails() {
     return (

@@ -3,15 +3,10 @@ import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import { ToastContainer } from "react-toastify";
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
-import Main from "./Main";
 
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps, ...appProps }: AppProps) {
-  // return <Component {...pageProps} />
-
   if (
     [`/Dashboard`, `/Authors`, `/Readers`, `/Transitions`].includes(
       appProps.router.pathname
