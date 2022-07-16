@@ -41,24 +41,26 @@ const DashboardLayout = (props: Props) => {
   return (
     <>
       {loadPage ? (
-        <div className="flex bg-[#EEF1F8] p-[30px] space-x-[20px]">
-          <div className="p-5 bg-white rounded-xl h-[94vh] mx-2">
-            <Sidebar />
-          </div>
-          <div className="col-span-5">
-            {showSearch ? (
-              <div className="mb-5">
-                <Search userData={currentUserData} />
+        <div className="bg-background min-h-screen z-1">
+          <div className="grid xl:grid-cols-6 bg-[#EEF1F8] md:grid-cols-5 sm:grid-row-2 p-5 gap-1">
+            <div className="p-5 bg-white rounded-xl h-[94vh] mx-2">
+              <Sidebar />
+            </div>
+            <div className="col-span-5">
+              {showSearch ? (
+                <div className="mb-5">
+                  <Search userData={currentUserData} />
+                </div>
+              ) : null}
+              <div
+                className={`bg-white rounded-md p-6 ${
+                  showSearch
+                    ? "min-h-[82vh] max-h-[82vh]"
+                    : "min-h-[94vh] max-h-[94vh]"
+                }  overflow-y-auto no-scrollbar`}
+              >
+                <main>{childrenWithAdjustedProps}</main>
               </div>
-            ) : null}
-            <div
-              className={`bg-white rounded-md p-6 ${
-                showSearch
-                  ? "min-h-[82vh] max-h-[82vh]"
-                  : "min-h-[94vh] max-h-[94vh]"
-              }  overflow-y-auto no-scrollbar`}
-            >
-              <main>{childrenWithAdjustedProps}</main>
             </div>
           </div>
         </div>

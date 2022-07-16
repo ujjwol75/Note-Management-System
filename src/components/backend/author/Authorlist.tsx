@@ -69,7 +69,7 @@ type Props = {
 export default function Authorlist(props: Props) {
   const { authorLists } = props;
   return (
-    <div className="p-4 h-[662px] w-[1136px] bg-white rounded-lg ">
+    <div className="p-4 h-[662px] w-full bg-white rounded-lg ">
       <div className="flex flex-col ">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
