@@ -64,7 +64,6 @@ const Signupcomponent = (props: Props) => {
                     </svg>
                   </div>
                 </Link>
-
                 <div>
                   <FormHeader
                     main_title={"Welcome Back"}
