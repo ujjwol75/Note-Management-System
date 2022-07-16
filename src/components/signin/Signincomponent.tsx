@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Signin_formValidation } from "../formikvalidation/Formikfromvalidation";
 
 type Props = {
   signInHandler: any;
@@ -12,20 +13,13 @@ const signInInitialValues = {
   password: "",
 };
 
-const formValidation = Yup.object().shape({
-  password: Yup.string()
-    .min(2, "Password is Short!")
-    .max(50, "Password too long!")
-    .required("Password is Required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-});
 const Signincomponent = (props: Props) => {
   const { signInHandler } = props;
   return (
     <>
       <Formik
         initialValues={signInInitialValues}
-        validationSchema={formValidation}
+        validationSchema={Signin_formValidation}
         onSubmit={signInHandler}
       >
         {({ values }) => (
@@ -91,7 +85,11 @@ const Signincomponent = (props: Props) => {
                       type="email"
                       name="email"
                     />
-                    <ErrorMessage name="email" component="div" className="text-sky-300" />
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="text-sky-300"
+                    />
                   </label>
                 </div>
                 <div className="mt-9">

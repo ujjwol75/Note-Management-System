@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import CustomeField from "../formikComponent/CustomeField";
-import CustomeDropdown from "../formikComponent/CustomeDropdown";
+import CustomeField from "../reusable/formikComponent/CustomeField";
+import CustomeDropdown from "../reusable/formikComponent/CustomeDropdown";
+import {Signup_formValidation} from "../formikvalidation/Formikfromvalidation";
 
 type Props = {
   signUpHandler: any;
@@ -27,26 +28,13 @@ const signupFormInitalValue = {
   confirm_password: "",
 };
 
-const formValidation = Yup.object().shape({
-  password: Yup.string()
-    .min(8, "Password is Short!")
-    .max(50, "Password too long!")
-    .required("Password is Required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  username: Yup.string().required("Username is required!"),
-  confirm_password: Yup.string()
-    .oneOf([Yup.ref("password"), ""], "Password must match")
-    .required("Required"),
-  phone: Yup.string().required("Phone number required!"),
-  role: Yup.string().required("Must select one option!"),
-});
 
 const Signupcomponent = (props: Props) => {
   const { signUpHandler, message } = props;
   return (
     <Formik
       initialValues={signupFormInitalValue}
-      validationSchema={formValidation}
+      validationSchema={Signup_formValidation}
       onSubmit={(data, props) => signUpHandler(data, props)}
     >
       {({ values, errors, touched }) => (
