@@ -29,7 +29,6 @@ export const getApiData = async (url: any, param?: any, auth = false) => {
       },
       transformResponse: [
         function (responseData) {
-          // Do whatever you want to transform the data
           return JSON.parse(responseData);
         },
       ],
