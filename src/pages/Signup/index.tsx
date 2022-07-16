@@ -10,14 +10,13 @@ export default function Signup() {
   const [message, setMessage] = useState("");
   const router = useRouter();
 
-  const signUpHandler = async (data: any, props: any) => {
+  const signUpHandler = async (data: any, formikProps: any) => {
     const url = APIS.REGISTER;
     console.log(url, "url");
     const formData = data;
-    console.log(formData)
-    const requestMethod = "POST";
-    const response = await postApiData({ url, formData, requestMethod });
-    console.log("response", response);
+    console.log(formikProps, "formik props")
+    const response = await postApiData({ url, formData, formikProps });
+    console.log(response.data);
     if (response.status === 200 || response.status === 201) {
       router.push("/Signin");
       toast.success("Login Success");

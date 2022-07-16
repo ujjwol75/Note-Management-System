@@ -40,7 +40,7 @@ const Signupcomponent = (props: Props) => {
       validationSchema={Signup_formValidation}
       onSubmit={(data, props) => signUpHandler(data, props)}
     >
-      {({ values, errors, touched }) => (
+      {({ values, errors, touched, isSubmitting }) => (
         <div>
           <Form>
             <div className="grid sm:grid-cols-8 ">

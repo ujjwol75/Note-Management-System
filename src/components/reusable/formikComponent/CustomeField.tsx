@@ -22,8 +22,7 @@ const CustomeField = (props: Props) => {
           type={type}
           name={name}
         />
-
-        <ErrorMessage name={name} component="div" />
+        <ErrorMessage name={name} component="div" className="text-red-600"/>
       </label>
     </div>
   );

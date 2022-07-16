@@ -25,7 +25,7 @@ const Signincomponent = (props: Props) => {
       <Formik
         initialValues={signInInitialValues}
         validationSchema={Signin_formValidation}
-        onSubmit={signInHandler}
+        onSubmit={(data, props) => signInHandler(data, props)}
       >
         {({ values }) => (
           <Form>

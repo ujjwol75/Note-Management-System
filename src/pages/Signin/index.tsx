@@ -10,11 +10,10 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Login() {
   const router = useRouter();
 
-  const signInHandler = async (data: any) => {
+  const signInHandler = async (data: any, formikProps: any) => {
     const url = APIS.LOGIN;
     const formData = data;
-    const requestMethod = "POST";
-    const response = await postApiData({ url, formData, requestMethod });
+    const response = await postApiData({ url, formData, formikProps });
     console.log("response", response);
     if (response?.status === 200 || response.status === 201) {
       const userAuth = {
