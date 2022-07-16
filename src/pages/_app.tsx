@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps, ...appProps }: AppProps) {
   if (
-    [`/Dashboard`, `/Authors`, `/Readers`, `/Transitions`].includes(
+    [`/Dashboard`, `/Authors`, `/Authors/Authordetails/[authorID]`, `/Readers`, `/Transitions`].includes(
       appProps.router.pathname
     )
   ) {

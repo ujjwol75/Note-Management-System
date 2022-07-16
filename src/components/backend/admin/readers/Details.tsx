@@ -4,8 +4,8 @@ import Cards from '../../../frontend/main/Cards';
 import Image from 'next/image';
 export default function Details() {
     return (
-        <div className='p-4 h-[662px] w-[1136px] bg-white rounded-lg font-Inter text-[15px] overflow-auto '>
-            <div className='w-[1090px] h-[40px] bg-theme font-medium text-white rounded-t-md flex items-center justify-between px-10 '>
+        <div className='p-4 h-[662px] w-full bg-white rounded-lg font-Inter text-[15px] overflow-auto '>
+            <div className='w-full h-[40px] bg-theme font-medium text-white rounded-t-md flex items-center justify-between px-10 '>
                 <div className='flex items-center'>
                     <Link href="Authors">
                         <h2 className='text-[#F0F0F0]'>Readers </h2>
@@ -62,7 +62,7 @@ export default function Details() {
                     </div>
                 </div>
             </div>
-            <div className='w-[1090px] h-[40px] bg-theme font-medium text-white rounded-t-md flex items-center justify-between px-10 '>
+            <div className='w-full h-[40px] bg-theme font-medium text-white rounded-t-md flex items-center justify-between px-10 '>
                 <h2 className='text-[#F0F0F0]'>Subscribed notes </h2>
             </div >
             <div className='flex space-x-10 py-6'>

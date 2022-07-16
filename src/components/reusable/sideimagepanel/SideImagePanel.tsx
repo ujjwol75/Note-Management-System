@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const SideImagePanel = () => {
+const SideImage = () => {
     return(
         <div className="object-cover hidden md:inline-block relative z-0 w-full h-[760px] sm:col-span-2 md:col-span-3 lg:col-span-4">
         <Link href="Main">
@@ -22,4 +22,4 @@ const SideImagePanel = () => {
       </div>
     )
 }
-export default SideImagePanel;
+export default SideImage;

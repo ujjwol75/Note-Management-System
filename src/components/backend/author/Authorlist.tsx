@@ -68,6 +68,7 @@ type Props = {
 };
 export default function Authorlist(props: Props) {
   const { authorLists } = props;
+  console.log(authorLists, "authorlists")
   return (
     <div className="p-4 h-[662px] w-full bg-white rounded-lg ">
       <div className="flex flex-col ">
@@ -109,7 +110,7 @@ export default function Authorlist(props: Props) {
                         {list.notes}
                       </td>
                       <td className=" px-6 py-4 whitespace-nowrap font-Inter">
-                        <Link href="Authordetails">
+                        <Link href={`Authors/Authordetails/${list.user.id}`}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-4 w-4 cursor-pointer opacity-50"

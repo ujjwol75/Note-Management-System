@@ -1,5 +1,5 @@
 import React from "react";
-import Notes from "../components/backend/Notes";
+import Notes from "../../components/backend/Notes";
 
 export default function dashboard() {
   return (

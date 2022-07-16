@@ -4,6 +4,7 @@ const APIS = {
     LOGIN: `/token/create/`,
     CURRENT_USER:`/user/me/`,
     AUTHORS: `/teacher/`,
-    READERS: `/student/`
+    READERS: `/student/`,
+    USER:`/user/`,
 };
 export default APIS
