@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Signin_formValidation } from "../formikvalidation/Formikfromvalidation";
+import CustomeField from "../reusable/formikComponent/CustomeField";
+import { CustomeButton } from "../reusable/buttons/CustomeButton";
 
 type Props = {
   signInHandler: any;
@@ -73,38 +75,20 @@ const Signincomponent = (props: Props) => {
                     Login to your account
                   </p>
                 </div>
+                <CustomeField
+                  label={"Email"}
+                  name={"email"}
+                  type={"text"}
+                  fieldname={"Enter email"}
+                />
 
                 <div className="mt-9">
-                  <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                    Email
-                  </h2>
-                  <label>
-                    <Field
-                      className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-96 "
-                      placeholder="Enter email"
-                      type="email"
-                      name="email"
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="text-sky-300"
-                    />
-                  </label>
-                </div>
-                <div className="mt-9">
-                  <h2 className="text-md text-[#455A64] mb-2 text-Inter font-medium">
-                    Password
-                  </h2>
-                  <label>
-                    <Field
-                      className="outline-none border-b-2 border-tgray p-2 rounded-lg w-48 sm:w-60 md:w-96 "
-                      placeholder="Enter password"
-                      type="password"
-                      name="password"
-                    />
-                    <ErrorMessage name="password" component="div" />
-                  </label>
+                  <CustomeField
+                    label={"Password"}
+                    name={"password"}
+                    type={"password"}
+                    fieldname={"Enter Passsword"}
+                  />
                   <Link href="Resetpassword">
                     <p className=" leading-6  font-Inter cursor-pointer text-[#ABABAB] text-sm mt-2 ml-2">
                       Forget Password ?
@@ -112,9 +96,7 @@ const Signincomponent = (props: Props) => {
                   </Link>
                 </div>
                 <div>
-                  <button type="submit" className="purple-btn">
-                    login
-                  </button>
+                  <CustomeButton type={"submit"} name={"Login"} />
                 </div>
                 <div>
                   <p className=" leading-6 font-Inter text-[#ABABAB] text-sm mt-2 ml-2">

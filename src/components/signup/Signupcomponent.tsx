@@ -5,7 +5,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CustomeField from "../reusable/formikComponent/CustomeField";
 import CustomeDropdown from "../reusable/formikComponent/CustomeDropdown";
-import {Signup_formValidation} from "../formikvalidation/Formikfromvalidation";
+import { Signup_formValidation } from "../formikvalidation/Formikfromvalidation";
+import { CustomeButton } from "../reusable/buttons/CustomeButton";
+import FormHeader from "../reusable/formheader/FormHeader";
 
 type Props = {
   signUpHandler: any;
@@ -27,7 +29,6 @@ const signupFormInitalValue = {
   password: "",
   confirm_password: "",
 };
-
 
 const Signupcomponent = (props: Props) => {
   const { signUpHandler, message } = props;
@@ -78,13 +79,10 @@ const Signupcomponent = (props: Props) => {
                 </Link>
 
                 <div>
-                  <h1 className="leading-[59px] text-5xl font-bold font-Jost">
-                    Welcome Back{" "}
-                  </h1>
-
-                  <p className="  leading-6 font-Inter text-[#ABABAB]">
-                    Create your account
-                  </p>
+                  <FormHeader
+                    main_title={"Welcome Back"}
+                    sub_title={"Create your account"}
+                  />
                 </div>
                 <div className="flex space-x-10 mt-9">
                   {/* Field for username */}
@@ -141,9 +139,7 @@ const Signupcomponent = (props: Props) => {
                 </div>
 
                 <div>
-                  <button type="submit" className="purple-btn">
-                    Signup
-                  </button>
+                  <CustomeButton type={"submit"} name={"Signup"} />
                 </div>
                 <div>
                   <p className=" leading-6 font-Inter text-[#ABABAB] text-sm mt-2 ml-2">
