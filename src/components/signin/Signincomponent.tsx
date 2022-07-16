@@ -7,7 +7,8 @@ import { Signin_formValidation } from "../formikvalidation/Formikfromvalidation"
 import CustomeField from "../reusable/formikComponent/CustomeField";
 import { CustomeButton } from "../reusable/buttons/CustomeButton";
 import FormHeader from "../reusable/formheader/FormHeader";
-import SideImagePanel from "../reusable/sideimagepanel/SideImagePanel"
+import SideImagePanel from "../reusable/sideimagepanel/SideImagePanel";
+import FormFooter from "../reusable/formfooter/FormFooter";
 
 type Props = {
   signInHandler: any;
@@ -29,7 +30,7 @@ const Signincomponent = (props: Props) => {
         {({ values }) => (
           <Form>
             <div className="grid md:grid-cols-8 ">
-              <SideImagePanel/>
+              <SideImagePanel />
               <div className="flex flex-col m-10 md:mt-32 text-[#323232] space-y-6   md:col-span-5 lg:col-span-4">
                 <Link href="Main">
                   <div className="md:hidden">
@@ -79,14 +80,11 @@ const Signincomponent = (props: Props) => {
                   <CustomeButton type={"submit"} name={"Login"} />
                 </div>
                 <div>
-                  <p className=" leading-6 font-Inter text-[#ABABAB] text-sm mt-2 ml-2">
-                    Don’t you have an account?
-                    <Link href="Signup">
-                      <span className="text-[#F42A41] xs:ml-4 text-md cursor-pointer">
-                        Signup
-                      </span>
-                    </Link>
-                  </p>
+                  <FormFooter
+                    title={"Don't have an account?"}
+                    link_name={"Signup"}
+                    to={"Signup"}
+                  />
                 </div>
               </div>
             </div>

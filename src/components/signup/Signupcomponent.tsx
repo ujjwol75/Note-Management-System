@@ -8,7 +8,8 @@ import CustomeDropdown from "../reusable/formikComponent/CustomeDropdown";
 import { Signup_formValidation } from "../formikvalidation/Formikfromvalidation";
 import { CustomeButton } from "../reusable/buttons/CustomeButton";
 import FormHeader from "../reusable/formheader/FormHeader";
-import SideImagePanel from "../reusable/sideimagepanel/SideImagePanel"
+import SideImagePanel from "../reusable/sideimagepanel/SideImagePanel";
+import FormFooter from "../reusable/formfooter/FormFooter";
 
 type Props = {
   signUpHandler: any;
@@ -43,7 +44,7 @@ const Signupcomponent = (props: Props) => {
         <div>
           <Form>
             <div className="grid sm:grid-cols-8 ">
-              <SideImagePanel/>
+              <SideImagePanel />
               <div className="flex flex-col m-10 mt-32 text-[#323232] space-y-6 col-span-5  md:col-span-5 lg:col-span-4">
                 <Link href="Main">
                   <div className="md:hidden">
@@ -71,14 +72,12 @@ const Signupcomponent = (props: Props) => {
                   />
                 </div>
                 <div className="flex space-x-10 mt-9">
-                  {/* Field for username */}
                   <CustomeField
                     label={"Username"}
                     name={"username"}
                     type={"text"}
                     fieldname={"Enter username"}
                   />
-                  {/* Field for full name */}
                   <CustomeField
                     label={"Full Name"}
                     name={"full_name"}
@@ -101,7 +100,6 @@ const Signupcomponent = (props: Props) => {
                   />
                 </div>
                 <div className="flex space-x-10 mt-9">
-                  {/* Custome dropdown menu */}
                   <CustomeDropdown
                     name={"role"}
                     options={options}
@@ -128,14 +126,11 @@ const Signupcomponent = (props: Props) => {
                   <CustomeButton type={"submit"} name={"Signup"} />
                 </div>
                 <div>
-                  <p className=" leading-6 font-Inter text-[#ABABAB] text-sm mt-2 ml-2">
-                    Already have an account?
-                    <Link href="Signin">
-                      <span className="text-[#F42A41] ml-4 cursor-pointer text-md">
-                        Login
-                      </span>
-                    </Link>
-                  </p>
+                  <FormFooter
+                    title={"Already have an account?"}
+                    link_name={"Signin"}
+                    to={"Signin"}
+                  />
                 </div>
               </div>
             </div>
