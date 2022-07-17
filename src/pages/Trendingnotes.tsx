@@ -7,10 +7,8 @@ import Courses from '../components/frontend/main/Courses'
 export default function Trendingnotes() {
     return (
         <div>
-            <Navbar />
             <Notecover detail="Trending Notes" />
             <Courses />
-            <Footer />
         </div>
     )
 }

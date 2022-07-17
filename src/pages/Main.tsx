@@ -13,7 +13,7 @@ import Courses from "../components/frontend/main/Courses";
 const Main = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <Coverpage height={700} />
             <Features1 />
             <Features2 />
@@ -21,7 +21,7 @@ const Main = () => {
             <CallAction />
             <Work />
             <Testimonial />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
