@@ -25,8 +25,8 @@ export default function Sidebar() {
     setIsActive(!isActive);
   };
   return (
-    <div className="w-[220px] h-[752px] bg-[#FFFFFF] text-[#37474F] p-8 font-Inter font-medium grid content-between">
-      <div>
+    <div className="h-full  bg-[#FFFFFF] text-[#37474F] font-Inter font-medium grid grid-cols-6 content-between relative ">
+      <div className="col-span-1">
         <Link href="Main">
           <div className=" relative w-[148px] h-[37px] cursor-pointer">
             <Image src="/logo2.png" alt="logo" layout="fill" />
@@ -79,8 +79,8 @@ export default function Sidebar() {
             <span>Settings</span>
           </div>
         </Link>
-      </div>
-      <div>
+      
+      <div className="w-full absolute bottom-4">
         <div className=" my-1 w-[172px] h-[40px] rounded-[10px] text-theme  border-[1px] border-temetext   flex items-center  p-2 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,9 +99,10 @@ export default function Sidebar() {
           <span onClick={logoutHandler}>logout</span>
         </div>
 
-        <span className="text-xs font-Roboto text-center text-[#ABABAB]">
+        <span className="text-xs font-Roboto text-[#ABABAB]">
           Copyright © 2022 NoteGhar - All rights reserved.{" "}
         </span>
+      </div>
       </div>
     </div>
   );

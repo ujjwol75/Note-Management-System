@@ -10,7 +10,7 @@ export const CustomeButton = (props: Props) => {
   return (
     <>
       <button type={type} className="purple-btn">
-        {name}
+        {name} 
       </button>
     </>
   );

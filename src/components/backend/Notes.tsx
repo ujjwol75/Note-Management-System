@@ -83,7 +83,8 @@ const lists = [
 
 export default function Notes() {
   return (
-    <div className=" relative p-4 h-[662px] w-full bg-white rounded-lg ">
+    <div className=" relative p-4 h-[662px] w-full bg-white rounded-lg grid grid-cols-5 ">
+      <div className="col-span-5">
       <div className="flex justify-between items-start">
         <h2 className="font-Inter text-lg font-medium">Notes list</h2>
         <div className="flex space-x-5">
@@ -173,6 +174,8 @@ export default function Notes() {
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }

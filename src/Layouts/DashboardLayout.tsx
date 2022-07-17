@@ -48,7 +48,7 @@ const DashboardLayout = (props: Props) => {
             </div>
             <div className="col-span-5">
               {showSearch ? (
-                <div className="mb-5">
+                <div className="mb-2">
                   <Search userData={currentUserData} />
                 </div>
               ) : null}
